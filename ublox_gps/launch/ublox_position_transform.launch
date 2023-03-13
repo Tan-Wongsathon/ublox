@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+  <node pkg="ublox_gps" type="ublox_position_transform_node" name="ublox_position_transform">
+  </node>
+</launch>

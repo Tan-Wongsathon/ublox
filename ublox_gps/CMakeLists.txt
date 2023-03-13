@@ -44,6 +44,9 @@ target_link_libraries(ublox_gps
   ${catkin_LIBRARIES}
 )
 
+add_executable(ublox_position_transform_node src/ublox_position_transform_node.cpp)
+target_link_libraries(ublox_position_transform_node ${catkin_LIBRARIES})
+
 # build node
 add_executable(ublox_gps_node src/node.cpp src/mkgmtime.c src/raw_data_pa.cpp)
 set_target_properties(ublox_gps_node PROPERTIES OUTPUT_NAME ublox_gps)

@@ -1,5 +1,34 @@
-device: /dev/ttyACM0
+device: /dev/ttyACM2
 frame_id: gps
 uart1:
   baudrate: 38400
 config_on_startup: false
+nmea: true
+
+fix_mode: 3d                # 1: 2d, 2: 3d, 3: auto
+enable_ppp: false
+
+gnss:
+  gps: true
+  glonass: false
+  beidou: false
+  qzss: false
+  #sbas: true
+
+publish:
+  nav:
+      all: true
+#  rxm:
+#      all: true # not supported ?
+  esf:
+    all:  true
+#  aid:
+#      all: true
+#  mon:
+#      all: true
+#    hui: false
+#  nav:
+#    posecef: false
+  hnr:
+     pvt: false # setting rate gave NAK on F9K
+  nmea: true
